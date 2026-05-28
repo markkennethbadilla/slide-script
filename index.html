@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SlideScript — AI Presentation & Script Generator | Standalone</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Generate complete, professional slide-by-slide presentation scripts with AI. Upload PDF or PowerPoint (.pptx) slides and generate structured prompts for ChatGPT, Gemini, or Claude. 100% free, runs entirely in your browser.">
+  <meta name="keywords" content="slide script generator, PDF to script, presentation script, Canva presentation generator, AI presentation maker, PowerPoint script, AI prompt generator, presentation helper, PDF text extractor">
+  <link rel="canonical" href="https://markkennethbadilla.github.io/slide-script/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://markkennethbadilla.github.io/slide-script/">
+  <meta property="og:title" content="SlideScript — AI Presentation & Script Generator">
+  <meta property="og:description" content="Create presentations with AI and generate complete presentation scripts. Upload PDF or PowerPoint slides, customize your presenter style, and get a ready-to-use prompt. Free, private, serverless.">
+  <meta property="og:image" content="https://markkennethbadilla.github.io/slide-script/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://markkennethbadilla.github.io/slide-script/">
+  <meta property="twitter:title" content="SlideScript — AI Presentation & Script Generator">
+  <meta property="twitter:description" content="Generate slides scripts from PDF or PPTX entirely in your browser. Serverless and secure.">
+  <meta property="twitter:image" content="https://markkennethbadilla.github.io/slide-script/og-image.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- JSON-LD Structured Data Schema -->
+  <script type="application/ld+json" id="schema-webpage">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "SlideScript — AI Presentation & Script Generator",
+      "description": "Upload PDF or PowerPoint slides and generate complete presentation scripts using any AI assistant. Extracts text from slides, builds a customizable prompt, and produces ready-to-use scripts.",
+      "url": "https://markkennethbadilla.github.io/slide-script/",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+  </script>
+
+  <script type="application/ld+json" id="schema-faq">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does SlideScript turn my slides into a presentation script?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SlideScript extracts text from each slide in your uploaded PDF or PPTX, then builds a structured prompt you can paste into any AI assistant (ChatGPT, Gemini, Claude, etc.) to generate a complete, slide-by-slide presentation script."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What file formats does SlideScript support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SlideScript accepts PDF and PowerPoint (.pptx) files. You can upload directly from PowerPoint, Canva (exported as PDF or PPTX), or Google Slides (exported as PPTX)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SlideScript free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, SlideScript is 100% free with no sign-up required. The file processing happens entirely in your browser — no data is uploaded to any server."
+          }
+        }
+      ]
+    }
+  </script>
+
+  <script type="application/ld+json" id="schema-breadcrumb">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://markkennethbadilla.github.io/slide-script/" }
+      ]
+    }
+  </script>
+</head>
+<body>
+  <!-- Physical Spotlight Radial Backdrop -->
+  <div id="spotlight-backdrop" class="spotlight-radial" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header id="main-header" class="header-container">
+    <div class="header-content">
+      <!-- Centered Official Logo asset injected from Inventory -->
+      <a href="#" id="brand-logo-container" class="logo-link"></a>
+      
+      <!-- Theme Switcher -->
+      <button id="theme-toggle-btn" class="theme-switcher-button" aria-label="Toggle visual theme">
+        <span id="theme-icon-container" class="theme-icon-slot"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <main id="main-content" class="content-container">
+    <!-- Hero Banner (Bespoke Offset Asymmetry) -->
+    <section id="hero-banner" class="hero-section">
+      <span class="badge-tag">Standalone Client Tool</span>
+      <h1 class="hero-title text-gradient">SlideScript</h1>
+      <p id="hero-subtitle" class="hero-description">
+        Turn your presentation slides into complete, word-for-word speaker scripts with AI. Private, serverless, and runs entirely in your browser.
+      </p>
+    </section>
+
+    <!-- How It Works Accordion -->
+    <section id="guide-accordion" class="guide-section">
+      <div class="guide-header">
+        <p class="guide-header-label">How it works</p>
+        <button id="guide-toggle-btn" class="guide-toggle-button">
+          <span id="guide-toggle-text">Hide steps</span>
+          <span id="guide-toggle-icon" class="guide-icon-slot"></span>
+        </button>
+      </div>
+
+      <div id="guide-steps-grid" class="guide-steps-container fade-in">
+        <!-- Dyn injected steps -->
+      </div>
+    </section>
+
+    <!-- Primary Interactive Bento Layout -->
+    <section id="tool-bento" class="tool-bento-layout">
+      <!-- Workspace Card (3/5 Columns Wide on Large Screens) -->
+      <div id="workspace-card" class="bento-card col-span-3">
+        <!-- Custom Tab Bar -->
+        <div class="tab-bar">
+          <button id="tab-create-btn" class="tab-button active">
+            <span class="tab-icon-slot" id="tab-create-icon-slot"></span>
+            <span>Create Presentation Prompt</span>
+          </button>
+          <button id="tab-script-btn" class="tab-button">
+            <span class="tab-icon-slot" id="tab-script-icon-slot"></span>
+            <span>Upload &amp; Generate Script</span>
+          </button>
+        </div>
+
+        <!-- Tab Body Context -->
+        <div class="tab-pane-content">
+          <!-- Pane 1: Canva/Presentation Details Form -->
+          <div id="pane-create" class="tab-pane active fade-in">
+            <form id="form-create-prompt" class="form-grid" onsubmit="return false;">
+              <div class="form-row col-span-1">
+                <label class="form-label" for="create-name">Your Name</label>
+                <input type="text" id="create-name" class="inventory-input" placeholder="e.g. Jane Smith">
+              </div>
+              <div class="form-row col-span-1">
+                <label class="form-label" for="create-role">Your Role</label>
+                <input type="text" id="create-role" class="inventory-input" placeholder="e.g. Lead Designer">
+              </div>
+              <div class="form-row col-span-2">
+                <label class="form-label" for="create-context">Presentation Context / Event</label>
+                <input type="text" id="create-context" class="inventory-input" placeholder="e.g. Quarterly Business Pitch, Client Proposal">
+              </div>
+              <div class="form-row col-span-1">
+                <label class="form-label" for="create-slides">Target Number of Slides</label>
+                <input type="number" id="create-slides" class="inventory-input" min="3" max="100" value="15">
+              </div>
+              <div class="form-row col-span-1">
+                <label class="form-label" for="create-style">Presentation Tone / Style</label>
+                <select id="create-style" class="inventory-input">
+                  <option value="layman-friendly">Layman-friendly</option>
+                  <option value="academic">Academic &amp; Scholarly</option>
+                  <option value="professional">Corporate &amp; Professional</option>
+                  <option value="casual">Casual &amp; Conversational</option>
+                </select>
+              </div>
+              <div class="form-row col-span-2">
+                <label class="form-label" for="create-topic">Presentation Core Topic <span class="required-star">*</span></label>
+                <textarea id="create-topic" class="inventory-input text-area-large" placeholder="What is your presentation about? Describe your core theme, outline, or details..." required></textarea>
+              </div>
+              <div class="form-row col-span-1">
+                <label class="form-label" for="create-subtopic">Subtopic / Focal Points <span class="optional-label">(optional)</span></label>
+                <input type="text" id="create-subtopic" class="inventory-input" placeholder="e.g. Social Media ROI">
+              </div>
+              <div class="form-row col-span-1">
+                <label class="form-label" for="create-instructions">Extra Prompt Instructions <span class="optional-label">(optional)</span></label>
+                <input type="text" id="create-instructions" class="inventory-input" placeholder="e.g. Minimalist layout, no text in images">
+              </div>
+              
+              <div class="form-action col-span-2">
+                <button type="submit" id="btn-generate-create" class="inventory-button primary-button">
+                  <span class="button-icon-slot" id="btn-create-icon-slot"></span>
+                  <span>Generate Canva Prompt</span>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Pane 2: PDF/PPTX Upload & Script Parser -->
+          <div id="pane-script" class="tab-pane fade-in">
+            <!-- File Drag and Drop Zone -->
+            <div id="drop-zone" class="upload-dropzone">
+              <div class="dropzone-content">
+                <div class="dropzone-icon-container" id="drop-icon-slot"></div>
+                <div class="dropzone-text-group">
+                  <p class="dropzone-title">Drag &amp; drop your file here</p>
+                  <p class="dropzone-subtitle">PDF or PowerPoint (.pptx) up to 25MB</p>
+                </div>
+                <button type="button" id="browse-btn" class="inventory-button secondary-button">Browse File</button>
+                <input type="file" id="file-input" class="hidden-input" accept=".pdf,.pptx">
+              </div>
+            </div>
+
+            <!-- Loader Indicator -->
+            <div id="extractor-loader" class="loader-container hidden">
+              <div class="spinner"></div>
+              <p class="loader-text">Extracting slide text in browser...</p>
+            </div>
+
+            <!-- Parsing Success Grid Panel -->
+            <div id="extracted-workspace" class="extracted-layout-grid hidden">
+              <!-- File Meta Bar -->
+              <div class="extracted-meta-bar">
+                <div class="meta-info">
+                  <span class="meta-icon-slot" id="meta-file-icon-slot"></span>
+                  <div>
+                    <p id="meta-filename" class="meta-title"></p>
+                    <p id="meta-slidecount" class="meta-subtitle"></p>
+                  </div>
+                </div>
+                <button type="button" id="btn-remove-file" class="remove-file-button" aria-label="Remove uploaded file">
+                  <span id="remove-file-icon-slot"></span>
+                </button>
+              </div>
+
+              <!-- Unextractable Text Warning -->
+              <div id="warning-empty-slides" class="warning-banner hidden">
+                <span id="warning-banner-icon-slot" class="warning-icon-slot"></span>
+                <span id="warning-text"></span>
+              </div>
+
+              <!-- Collapsible Slides Accordion List -->
+              <div class="slides-preview-container">
+                <h3 class="panel-section-title">Extracted Slides Content</h3>
+                <div id="slides-accordion-list" class="slides-accordion-list">
+                  <!-- Injected dynamically -->
+                </div>
+              </div>
+
+              <!-- Presentation Prompt Form Settings -->
+              <div class="script-settings-form">
+                <h3 class="panel-section-title">Customize Presenter Prompt</h3>
+                <div class="form-grid">
+                  <div class="form-row col-span-1">
+                    <label class="form-label" for="script-name">Presenter Name</label>
+                    <input type="text" id="script-name" class="inventory-input" placeholder="e.g. Jane Smith">
+                  </div>
+                  <div class="form-row col-span-1">
+                    <label class="form-label" for="script-role">Presenter Role</label>
+                    <input type="text" id="script-role" class="inventory-input" placeholder="e.g. Tech Lead">
+                  </div>
+                  <div class="form-row col-span-2">
+                    <label class="form-label" for="script-context">Speech Context / Venue</label>
+                    <input type="text" id="script-context" class="inventory-input" placeholder="e.g. Annual Tech Symposium">
+                  </div>
+                  <div class="form-row col-span-1">
+                    <label class="form-label" for="script-style">Presenter Style</label>
+                    <select id="script-style" class="inventory-input">
+                      <option value="layman-friendly">Layman-friendly</option>
+                      <option value="academic">Academic &amp; Scientific</option>
+                      <option value="professional">Corporate Executive</option>
+                      <option value="casual">Conversational Storytelling</option>
+                    </select>
+                  </div>
+                  <div class="form-row col-span-1">
+                    <label class="form-label" for="script-qna">Add Q&amp;A Slides</label>
+                    <input type="number" id="script-qna" class="inventory-input" min="0" max="10" value="0">
+                  </div>
+                  <div class="form-row col-span-1">
+                    <label class="form-label" for="script-mcq">MCQ per Q&amp;A Slide</label>
+                    <input type="number" id="script-mcq" class="inventory-input" min="1" max="5" value="2">
+                  </div>
+                  <div class="form-row col-span-1">
+                    <label class="form-label" for="script-instructions">Special Instructions</label>
+                    <input type="text" id="script-instructions" class="inventory-input" placeholder="e.g. Include stage directions">
+                  </div>
+                  
+                  <div class="form-action col-span-2">
+                    <button type="button" id="btn-generate-script" class="inventory-button primary-button">
+                      <span class="button-icon-slot" id="btn-script-gen-icon-slot"></span>
+                      <span>Generate Script Prompt</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prompt Output Card (2/5 Columns Wide on Large Screens, Sticky) -->
+      <div id="output-sticky-card" class="bento-card col-span-2 output-card-sticky">
+        <div class="output-header-bar">
+          <div class="header-accent-glow"></div>
+          <span class="output-header-icon" id="output-header-icon-slot"></span>
+          <h3 class="output-header-title">Generated Prompt</h3>
+        </div>
+
+        <!-- Initial Placeholder State -->
+        <div id="output-placeholder" class="output-empty-state">
+          <span class="placeholder-icon-container" id="placeholder-icon-slot"></span>
+          <p class="placeholder-text">Your structured AI script prompt will appear here once generated.</p>
+        </div>
+
+        <!-- Active Loaded Prompt State -->
+        <div id="output-active-container" class="output-active-layout hidden">
+          <div class="textarea-wrapper">
+            <textarea id="prompt-output-box" class="output-prompt-box" readonly></textarea>
+            <button id="copy-prompt-btn" class="copy-action-button" title="Copy to clipboard">
+              <span id="copy-btn-icon-slot" class="copy-icon-slot"></span>
+            </button>
+          </div>
+
+          <div class="ai-redirect-panel">
+            <p class="panel-small-title">Paste directly into:</p>
+            <div class="ai-link-row">
+              <a href="https://gemini.google.com/app" target="_blank" rel="noopener noreferrer" class="ai-link-button">
+                <span>Google Gemini</span>
+                <span class="link-icon-slot" id="gemini-link-icon-slot"></span>
+              </a>
+              <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer" class="ai-link-button">
+                <span>ChatGPT</span>
+                <span class="link-icon-slot" id="chatgpt-link-icon-slot"></span>
+              </a>
+              <a href="https://claude.ai/new" target="_blank" rel="noopener noreferrer" class="ai-link-button">
+                <span>Claude AI</span>
+                <span class="link-icon-slot" id="claude-link-icon-slot"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Premium Editorial Footer -->
+  <footer id="main-footer" class="footer-container">
+    <div class="footer-content">
+      <div class="footer-asymmetric-row">
+        <!-- Logo mapping injected from inventory -->
+        <div id="footer-logo-container" class="logo-link"></div>
+        <p class="footer-tagline">Elegant bridges between digital slides and spoken words.</p>
+      </div>
+      <hr class="footer-divider">
+      <div class="footer-bottom-row">
+        <p class="copyright-text">&copy; 2026 SlideScript. Crafted globally by human engineers.</p>
+        <div class="footer-links">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External Library Dependencies Loaded Asynchronously -->
+  <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@5.4.624/build/pdf.min.mjs" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js" defer></script>
+  
+  <!-- JavaScript Application Entry Logic -->
+  <script src="app.js" defer></script>
+</body>
+</html>
